@@ -21,7 +21,7 @@ def generate_returns(seed):
     return prices, returns
 
 # -------------------- SIDEBAR --------------------
-st.sidebar.title("ตั้งค่าเกม")
+st.sidebar.title("register")
 player_name = st.sidebar.text_input("ชื่อผู้เล่น")
 shared_seed = st.sidebar.text_input("รหัสเกม (seed)", value="12345")
 
@@ -32,7 +32,7 @@ if not shared_seed.isnumeric():
 seed = int(shared_seed)
 
 # -------------------- GAME DISPLAY --------------------
-st.title("เกมจำลองการลงทุน (ตาม seed)")
+st.title("InvestmentgameBypae")
 
 if player_name:
     st.success(f"ยินดีต้อนรับ {player_name}")
@@ -48,4 +48,4 @@ if player_name:
     with st.expander("ดูรายละเอียดรายเดือน"):
         st.dataframe(df, use_container_width=True)
 else:
-    st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม")
+    st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม \n\ ปุ่ม >>บริเวณด้านซ้ายมือ")
