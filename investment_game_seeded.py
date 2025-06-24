@@ -49,4 +49,15 @@ if player_name:
         st.dataframe(df, use_container_width=True)
 else:
     st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม  ปุ่ม >> ด้านซ้ายมือ")
+
+
+st.title("register")
+player_name = st.text_input("ชื่อผู้เล่น")
+shared_seed = st.text_input("รหัสเกม (seed)", value="12345")
+
+if not shared_seed.isnumeric():
+    st.warning("กรุณากรอก seed เป็นตัวเลขเท่านั้น")
+    st.stop()
+
+seed = int(shared_seed)
     
