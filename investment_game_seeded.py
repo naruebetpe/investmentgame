@@ -27,7 +27,7 @@ st.title("InvestmentgameBypae")
     # regiser part 
 st.title("register")
 player_name = st.text_input("ชื่อผู้เล่น")
-shared_seed = st.text_input("รหัสเกม (seed)", value="12345")
+shared_seed = st.text_input("รหัสเกม (seed)", )
 
 if not shared_seed.isnumeric():
     st.warning("กรุณากรอก seed เป็นตัวเลขเท่านั้น")
