@@ -20,7 +20,16 @@ def generate_returns(seed):
         prices.append(prices[-1] * (1 + r))
     return prices, returns
 
+# regiser part 
+st.title("register")
+player_name = st.text_input("ชื่อผู้เล่น")
+shared_seed = st.text_input("รหัสเกม (seed)", value="12345")
 
+if not shared_seed.isnumeric():
+    st.warning("กรุณากรอก seed เป็นตัวเลขเท่านั้น")
+    st.stop()
+
+seed = int(shared_seed)
 
 # -------------------- GAME DISPLAY --------------------
 st.title("InvestmentgameBypae")
@@ -41,14 +50,5 @@ if player_name:
 else:
     st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม  ปุ่ม >> ด้านซ้ายมือ")
 
-# regiser part 
-st.title("register")
-player_name = st.text_input("ชื่อผู้เล่น")
-shared_seed = st.text_input("รหัสเกม (seed)", value="12345")
 
-if not shared_seed.isnumeric():
-    st.warning("กรุณากรอก seed เป็นตัวเลขเท่านั้น")
-    st.stop()
-
-seed = int(shared_seed)
     
