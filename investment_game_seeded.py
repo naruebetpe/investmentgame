@@ -48,7 +48,7 @@ if player_name:
     with st.expander("ดูรายละเอียดรายเดือน"):
         st.dataframe(df, use_container_width=True)
 else:
-    st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม  ปุ่ม >> ด้านซ้ายมือ")
+    st.info("กรุณาใส่ชื่อผู้เล่นก่อนเริ่มเกม")
 
 
     
